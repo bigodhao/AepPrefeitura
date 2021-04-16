@@ -1,0 +1,18 @@
+REQUISITOS FUNCIONAIS:
+  - O site deverá ter o cadastro e login do usuário;
+  - As funções de busca por disciplina, ano e ou nome de conteúdo;
+  - Terá somente um tipo de utilizador que terá acesso de busca e criação de conteúdos;
+  - O cadastro de conteúdo terá como opcional o anexo de arquivos .ppt, .doc, .pdf, .png;
+  - O usuário poderá alterar/atualizar seus conteúdos como seus dados pessoais;
+  - O site deveria avisar o usuário de qualquer eventual erro que surgir;
+  -
+
+
+
+REQUISITOS NÃO FUNCIONAIS:
+  - O Sistema deverá ser acessível aos principais browser de internet(chrome, firefox);
+  - A aplicação deverá ter uma interface simples e intuitiva para motivar e facilitar a sua utilização.
+  - A segurança dos dados é importante sendo fundamental a protecção das informações contra acessos não autorizados.
+  -
+  -
+  -
