@@ -8,11 +8,11 @@
 		<version>2.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.projeto</groupId>
-	<artifactId>ProjetoConteudoProfessores</artifactId>
+	<groupId>com.aep</groupId>
+	<artifactId>ProjetoConteudoProfessor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ProjetoConteudoProfessores</name>
-	<description>Projeto Contedo Professores project for Spring Boot</description>
+	<name>ProjetoConteudoProfessor</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
