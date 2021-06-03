@@ -7,7 +7,21 @@ public enum Genero {
 	OUTROS('O');
 	private char valor;
 	
-	Genero(char c) {
-		
+	Genero(char valor) {
+		this.valor = valor;
+	}
+	public char getGenero() {
+		return valor;
+	}
+	public static Genero valueOf(char valor) {
+		if (valor == 'M') {
+			return MASCULINO;
+		}else if (valor == 'F') {
+			return FEMININO;
+		}else if (valor == 'O'){
+			return OUTROS;
+		}else {
+			throw new IllegalArgumentException("Sexo invalido");
+		}
 	}
 }
