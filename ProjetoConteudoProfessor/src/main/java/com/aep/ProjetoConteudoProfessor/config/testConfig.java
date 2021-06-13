@@ -35,7 +35,7 @@ public class testConfig  implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		NivelEnsino nivelEnsino1 = new NivelEnsino("PRIMEIRO ANO");
+		NivelEnsino nivelEnsino1 = new NivelEnsino("SEGUNDO ANO");
 		
 		nivelEnsinoRepository.save(nivelEnsino1);
 		
@@ -49,12 +49,12 @@ public class testConfig  implements CommandLineRunner{
 		favoritosRepository.save(favoritos);
 		
 		
-		Usuario usuario1 = new Usuario("João ", "Carvalho", Genero.MASCULINO, "27/07/2001",
-				"JOAO@GMAIL.COM", "123", "04529447910", profissional, favoritos);
-//		Usuario usuario2 = new Usuario("Paulo ", "França", Genero.MASCULINO, "20/05/1995",
-//				"PAULO@GMAIL.COM", "12345", "10026219840", new DadosProfissional(), new Favoritos());
+//		Usuario usuario1 = new Usuario("João ", "Carvalho", Genero.MASCULINO, "27/07/2001",
+//				"JOAO@GMAIL.COM", "123", "04529447910", profissional, favoritos);
+		Usuario usuario2 = new Usuario("Paulo ", "França", Genero.MASCULINO, "20/05/1995",
+				"PAULO@GMAIL.COM", "12345", "10026219840", profissional, favoritos);
 		
-		usuarioRepository.saveAll(Arrays.asList(usuario1));
+		usuarioRepository.saveAll(Arrays.asList(usuario2));
 		
 	}
 }
