@@ -7,13 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.aep.ProjetoConteudoProfessor.entidades.Conteudo;
+import com.aep.ProjetoConteudoProfessor.entidades.Favoritos;
+import com.aep.ProjetoConteudoProfessor.entidades.Usuario;
 import com.aep.ProjetoConteudoProfessor.repositories.ConteudoRepository;
+import com.aep.ProjetoConteudoProfessor.repositories.FavoritosRepository;
+import com.aep.ProjetoConteudoProfessor.repositories.UsuarioRepository;
 
 @Service
 public class ConteudoService {
 	
 	@Autowired
 	private ConteudoRepository repository;
+	
+	@Autowired
+	private UsuarioService usuarioService;
+	
+	@Autowired
+	private FavoritosRepository favoritosRepository;
 	
 	public List<Conteudo> findAll(){
 		return repository.findAll();
@@ -25,7 +35,11 @@ public class ConteudoService {
 	}
 	
 	public Conteudo insert (Conteudo obj) {
-		return repository.save(obj); // realizar melhorias para validar
+		Optional<Favoritos> favoritos = favoritosRepository.findById(obj.getUsuario().getFavoritos().getId());
+		favoritos.get().setConteudo(obj);
+		Conteudo conteudo = repository.save(obj);
+		favoritosRepository.save(favoritos.get());
+		return conteudo; // realizar melhorias para validar
 	}
 	
 	public boolean delete (long id) {
