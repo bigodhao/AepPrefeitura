@@ -35,11 +35,7 @@ public class ConteudoService {
 	}
 	
 	public Conteudo insert (Conteudo obj) {
-		Optional<Favoritos> favoritos = favoritosRepository.findById(obj.getUsuario().getFavoritos().getId());
-		favoritos.get().setConteudo(obj);
-		Conteudo conteudo = repository.save(obj);
-		favoritosRepository.save(favoritos.get());
-		return conteudo; // realizar melhorias para validar
+		return repository.save(obj); // realizar melhorias para validar
 	}
 	
 	public boolean delete (long id) {
