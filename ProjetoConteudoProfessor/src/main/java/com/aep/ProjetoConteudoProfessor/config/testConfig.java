@@ -47,9 +47,9 @@ public class testConfig  implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		NivelEnsino nivelEnsino1 = new NivelEnsino("SEGUNDO ANO");
-		
-		nivelEnsinoRepository.save(nivelEnsino1);
+//		NivelEnsino nivelEnsino1 = new NivelEnsino("SEGUNDO ANO");
+//		
+//		nivelEnsinoRepository.save(nivelEnsino1);
 //		
 //		DadosProfissional profissional = new DadosProfissional();
 //		profissional.setNivelEnsino(nivelEnsino1);
@@ -66,11 +66,11 @@ public class testConfig  implements CommandLineRunner{
 //		Usuario usuario2 = new Usuario("Paulo ", "França", Genero.MASCULINO, "20/05/1995",
 //				"PAULO@GMAIL.COM", "12345", "10026219840", profissional, favoritos);
 //		
-//		usuarioRepository.saveAll(Arrays.asList(usuario2));
-		
-		Conteudo conteudo1 = new Conteudo("historia", "crise de 29", "a crise de 29", nivelEnsino1, usuarioService.findById(8L));
-		
-		conteudoService.insert(conteudo1);
+//		usuarioRepository.saveAll(Arrays.asList(usuario1));
+//		
+//		Conteudo conteudo1 = new Conteudo("historia", "crise de 29", "a crise de 29", nivelEnsino1, usuario1);
+//		
+//		conteudoService.insert(conteudo1);
 		
 	}
 }

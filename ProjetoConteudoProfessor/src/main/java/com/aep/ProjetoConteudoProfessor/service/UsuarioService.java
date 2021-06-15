@@ -19,7 +19,7 @@ public class UsuarioService {
 	
 	@Autowired
 	private UsuarioRepository repository;
-	
+
 	@Autowired
 	private NivelEnsinoRepository ensinoRepository;
 	
@@ -28,6 +28,15 @@ public class UsuarioService {
 	
 	@Autowired
 	private FavoritosRepository favoritosRepository;
+	
+	public UsuarioService(UsuarioRepository repository, NivelEnsinoRepository ensinoRepository,
+			DadosProfissionalRepository profissionalRepository, FavoritosRepository favoritosRepository) {
+		super();
+		this.repository = repository;
+		this.ensinoRepository = ensinoRepository;
+		this.profissionalRepository = profissionalRepository;
+		this.favoritosRepository = favoritosRepository;
+	}
 	
 	public List<Usuario> findAll(){
 		return repository.findAll();
