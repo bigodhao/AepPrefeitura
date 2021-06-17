@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	<link href="style.css" rel="stylesheet">
+	
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-primary">
+    <a class="navbar-brand">Materiais já</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+        <a class="nav-link" href="pagina-inicial.html">Pagina inicial <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Disciplinas
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="disciplina-Português.html">Português</a>
+            <a class="dropdown-item" href="disciplina-Matemática.html">Matemática</a>
+            <a class="dropdown-item" href="disciplina-História.html">História</a>
+            <a class="dropdown-item" href="disciplina-Geografia.html">Geografia</a>
+            <a class="dropdown-item" href="disciplina-Ciências.html">Ciências</a>
+            <a class="dropdown-item" href="disciplina-Inglês.html">Inglês</a>
+            <a class="dropdown-item" href="discplina-Educação Física.html">Educação Física</a>
+        </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="favoritos.html">Favoritos</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="adcionar-conteudo.html">Adicionar Conteúdo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="meus-conteúdos.html">Meus Conteúdos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Dados-pessoais.html">Dados Pessoais</a>
+        </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    </div>
+</nav>
+
+<!-- card -->
+
+<div class="card"style="width: 600px; height: 600px; margin-left:auto; margin-right: auto; margin-top: 20px">
+    <div class="text-center " style="margin-top: 10px ;"> <h3>Adicionar Conteúdo</h3></div>
+
+    <label style="margin-left:50px ;" for="Nomematerial"> Titulo do Material: </label>
+    <input class="form-control" id="Nomematerial" name="Nomematerial" required="required" type="text" placeholder="ex. topografia brasileira" style="width: 500px; margin-left: 50px;"/>
+    <p></p>
+    <label style="margin-left:50px ;" for="Descricao"> Descrição: </label>
+    <textarea name="" id="" cols="30" rows="10" style="width: 500px;margin-left: 50px;" placeholder="Descrição"></textarea>
+    <div class="row" style="margin-left: 50px;margin-top: 20px;">
+        <form>
+            Disciplina
+            <select class="custom-select" style="width: 120px;">
+                <option value="Português">Português</option>
+                <option value="Matemática">Matemática</option>
+                <option value="História">História</option>
+                <option value="Geografia">Geografia</option>
+                <option value="Ciências">Ciências</option>
+                <option value="Inglês">Inglês</option>
+            </select>
+        </form>
+        <form style="margin-left:95px ;">
+            Nivel de Ensino
+            <select class="custom-select" style="width: 100px;">
+                <option value="1° ano">1° ano</option>
+                <option value="2° ano">2° ano</option>
+                <option value="3° ano">3° ano</option>
+                <option value="4° ano">4° ano</option>
+                <option value="5° ano">5° ano</option>
+               
+            </select>
+        </form>
+    </div>
+    <button type="button" class="btn btn-outline-success" style="width: 80px;margin-left: 50px;margin-top: 30px;" aria-label="Left Align">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16" >
+            <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+            <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+        </svg>
+    </button>
+        
+    <div class="row" style="margin-left: 360px;margin-top: 50px;margin-bottom: 40px;">
+        
+            
+        <a href="Tela_Meus_Dados.html" class="btn btn-primary" type="button" style="width: 80px;height: 40px ; margin-right: 10px;">Voltar</a>
+        <a href="Tela_Meus_Dados.html" class="btn btn-primary" type="submit" style="width: 100px;height: 40px ">Adicionar</a>
+    </div>
+</div>
+
+
+</body>
+</html>

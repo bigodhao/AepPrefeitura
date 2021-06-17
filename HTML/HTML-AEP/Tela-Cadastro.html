@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	<link href="style.css" rel="stylesheet">
+
+    <script>
+        function validarSenha(){
+            Senha = document.f1.Senha.value
+            ConfirmarSenha = document.f1.ConfirmarSenha.value
+         
+            if (Senha == ConfirmarSenha)
+                alert("SENHAS IGUAIS")
+            else
+                alert("SENHAS DIFERENTES")
+        }
+    </script>    
+
+</head>
+<body>
+<!--FORMULÁRIO DE CADASTRO-->
+<div class = "card" style="height: 800px; width: 1400px ; margin-left: auto ; margin-right: auto ; margin-top: 100px ; margin-bottom: 100px">
+    <div class = "card-body">
+            <div id="Cadastro">
+                <form method="post" action=""> 
+                <div class="text-center">
+                    <h1>Materiais já</h1>
+                </div>
+                <div class="form-group ls-Cadastro-email"> 
+                    <label for="Email">Email</label>
+                    <input class="form-control" id="Email" name="Email" required="required" type="email" placeholder="******@gmail.com"/> 
+                </div>
+
+                <div class="row" >
+                    <div class="form-group ls-cadastro-Nome" style="margin-left: 15px;"> 
+                        <label for="Nome">Usuário</label>
+                        <input class="form-control" id="Nome" name="Nome" required="required" type="text" placeholder="Usuário" style="width: 650px;"/>
+                    </div>
+                    <div class="form-group ls-cadastro-Sobrenome" style="margin-left: 55px;"> 
+                        <label for="Sobrenome">Sobrenome</label>
+                        <input class="form-control" id="Sobrenome" name="Sobrenome" required="required" type="text" placeholder="Sobrenome" style="width: 650px;"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group ls-cadastro-CPF" style="margin-left: 15px;"> 
+                        <label for="CPF">CPF</label>
+                        <input class="form-control" id="CPF" name="CPF" required="required" type="text" placeholder="999.999.999-99" style="width: 650px;"/>
+                    </div>
+                    <div class="form-group ls-cadastro-Gênero" style="margin-left: 55px"> 
+                        <label for="Gênero">Sexo</label>
+                            <input class="form-control" list="Gênero" name="Gênero" type="text" required="required" placeholder="Gênero" style="width: 650px"/>       <!nao tem como fazer isso no html mas tem como fazer em jquery>
+                            <datalist id="Gênero" >
+                                <option value="Homem">
+                                <option value="Mulher">
+                            </datalist>
+                    </div>
+                </div>
+
+                <div class="form-group ls-cadastro-Instituição-de-Ensino">
+                    <label for="Instituição de Ensino">Instituição de Ensino:</label>
+                        <input class="form-control" list="Instituição de Ensino" name="Instituição de Ensino" type="text" placeholder="Instituição de Ensino" style="width: 1355px"/>       <!nao tem como fazer isso no html mas tem como fazer em jquery>
+                        <datalist id="Instituição de Ensino" >
+                            <option value="KIMURA, C M E I MONS">
+                            <option value="JOSE DE ANCHIETA, C M E I">
+                            <option value="PURIFICACAO DE J VALENTE, C M E I">
+                            <option value="VANOR HENRIQUES, C M E I PION">
+                            <option value="ODETE R GOMES DE CASTRO, E M-EF">
+                        </datalist>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group ls-cadastro-Área-de-Atuação" style="margin-left: 15px;">
+                        <label for="Área de Atuação">Área de atuação</label>
+                            <input class="form-control" list="Área de Atuação" name="Área de Atuação" type="text" required="required" placeholder="Área de Atuação" style="width: 650px"/>       <!nao tem como fazer isso no html mas tem como fazer em jquery>
+                            <datalist id="Área de Atuação" >
+                                <option value="Ciências">
+                                <option value="Matemática">
+                                <option value="Inglês">
+                                <option value="Historia">
+                                <option value="Geografia">
+                                <option value="Artes">
+                                <option value="Educação Física">
+                            </datalist>
+                    </div>
+                    <label for="Nível de Ensino" style=" margin-left: 55px">Nível de Ensino</label><p></p>
+                    <div class="card" style=" margin-left: -113px; margin-top: 30px;">
+                        <div class="card-body" style="height: 50px; width: 300px;">
+                            <div class="form-group ls-cadastro-Nível-de-Ensino" >
+                                <div class="row">    
+                                    <input  type="checkbox" id="Funadamental_I" name="scales" style="margin-top: 5px; margin-right: 10px;">
+                                    <label for="scales" style="margin-right: 10px;">Funadamental I</label>
+                                    <input  type="checkbox" id="Funadamental_II" name="Funadamental_II" style="margin-top: 5px; margin-right: 10px;">
+                                    <label for="scales">Funadamental II</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                    <div class="row">
+                            <div class="form-group ls-cadastro-senha" style="margin-left: 15px;"> 
+                                <label for="Senha">Senha</label>
+                                <input class="form-control" id="Senha" name="Senha" required="required" type="password" placeholder="ex. 1234" style="width: 650px;"/>
+                            </div>
+                            <div class="form-group ls-cadastro-Confirmar-Senha" style="margin-left: 55px"> 
+                                <label for="Senha">Confirmar Senha</label>
+                                <input class="form-control" id="Confirmar_Senha" name="ConfirmarSenha" required="required" type="password" placeholder="ex. 1234" style="width: 650px"/>
+                            </div>
+                    </div> 
+                    <br><br><br><br>
+                    <div class="text-center">
+                        <p> 
+                            <input class="btn btn-primary" type="submit" value="Cadastrar" style="width: 400px"/> 
+                        </p>
+                        <p class="link"> 
+                            Já tem conta?
+                            <a href="Tela-Login.html"> Ir para Login </a>
+                        </p>
+                    </div>
+            </div>
+    </div>
+</div> 
+
+</script> 
+</body>
+</html>
